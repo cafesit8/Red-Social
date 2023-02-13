@@ -1,0 +1,69 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $font-family;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+header{
+    padding: 10px 10px;
+    width: 100%;
+    background-color: var(--color-content-custom);
+    position: fixed;
+    z-index: 10;
+}
+
+nav{
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span{
+        font-weight: 500;
+        color: var(--color-content-negro);
+        @include flex(center,center);
+
+        img{
+            width: 30px;
+            margin-right: 5px
+        }
+    }
+
+    .user{
+        @include width-height(140px, auto);
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        button{
+            @include width-height(90px, 30px);
+            background-color: var(--color-content-color);
+            color: $color-blanco;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px
+        }
+
+        div{
+            @include width-height(35px, 35px);
+            border-radius: 100%;
+            overflow: hidden;
+
+            img{
+                @include width-height(100%, 100%);
+                object-fit: cover;
+            }
+        }
+    }
+}

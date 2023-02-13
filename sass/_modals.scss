@@ -1,0 +1,149 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+/*--------Modal-Story--------*/
+.story{
+    display: none;
+}
+
+.story.show{
+    position: fixed;
+    @include flex(center, center);
+    z-index: 15;
+    @include width-height(100%, 100vh);
+    background-color: rgb(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.story.show .content{
+    @include width-height(600px, 80vh);
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+
+    @media (max-width: 500px) {
+        @include width-height(100%, 90vh);
+    }
+
+    ion-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 35px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    img{
+        @include width-height(100%, 100vh);
+        object-fit: cover;
+    }
+}
+
+/*--------Modal-Themes--------*/
+
+.theme{
+    display: none;
+}
+
+.theme.show{
+    position: fixed;
+    @include flex(center, center);
+    z-index: 15;
+    @include width-height(100%, 100vh);
+    background-color: rgb(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+
+    .content{
+        @include width-height(500px, auto);
+        padding: 30px 0;
+        border-radius: 15px;
+        background-color: var(--color-content-custom);
+        @include flex(center, center);
+        flex-direction: column;
+        position: relative;
+
+        @media (max-width: 500px) {
+            @include width-height(90%, auto);
+        }
+
+        h4{
+            color: var(--color-content-negro);
+            margin-bottom: 10px;
+        }
+
+        ion-icon{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: var(--color-content-negro);
+            cursor: pointer;
+        }
+
+        .select-color{
+            background-color: var(--color-bg);
+            @include width-height(90%, auto);
+            @include flex(space-between, center);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+
+            div{
+                @include width-height(30px, 30px);
+                border-radius: 100%;
+                cursor: pointer;
+            }
+
+            div.active{
+                border: solid 5px var(--color-content-negro);
+            }
+
+            .rojo{
+                background-color: $color-rojo;
+            }
+            .verde{
+                background-color: $color-verde;
+            }
+            .morado{
+                background-color: $color-morado;
+            }
+            .celeste{
+                background-color: $color-celeste;
+            }
+            .amarillo{
+                background-color: $color-amarillo;
+            }
+        }
+
+        .select-bg{
+            @include width-height(90%, auto);
+            @include flex(space-between, center);
+
+            div{
+                padding: 6px 12px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+            div.active{
+                border: solid var(--color-content-color);
+            }
+
+            .dia{
+                background-color: $color-blanco;
+            }
+            .oscuro{
+                background-color: $color-oscuro;
+                color: $color-blanco;
+            }
+            .noche{
+                background-color: black;
+                color: $color-blanco;
+            }
+        }
+    }
+}

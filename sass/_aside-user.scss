@@ -1,0 +1,140 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+main{
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+}
+
+.aside-menu{
+    position: relative;
+    padding: 10px;
+    width: 25%;
+
+    &__user{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: var(--color-content-custom);
+        @include width-height(100%, auto);
+        border-radius: 15px;
+
+        .img-content{
+            @include width-height(40px, 40px);
+            border-radius: 100%;
+            overflow: hidden;
+
+            img{
+                @include width-height(100%, 100%);
+                object-fit: cover;
+            }
+        }
+
+        .user-title{
+            margin-left: 15px;
+
+            h2{
+                font-size: 15px;
+                color: var(--color-content-negro);
+            }
+            h3{
+                font-size: 13px;
+                color: gray;
+            }
+        }
+    }
+
+    &__options{
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 15px;
+        background-color: var(--color-content-custom);
+
+        ul{
+            list-style: none;
+            li{
+                display: block;
+                @include width-height(100%, 60px);
+                @include flex(flex-start, center);
+                padding-left: 15px;
+                font-weight: 600;
+                font-size: 15px;
+                position: relative;
+                cursor: pointer;
+                border-left: solid transparent 5px;
+                color: var(--color-content-negro);
+
+                ion-icon{
+                    margin-right: 10px;
+                    color: #808080;
+                    font-size: 17px;
+                }
+
+                &:hover{
+                    background-color: var(--color-bg);
+                    color: var(--color-content-color);
+                    border-left: solid var(--color-content-color) 5px;
+                    ion-icon{
+                        color: var(--color-content-color);
+                    }
+                }
+            }
+
+            li.active{
+                background-color: var(--color-bg);
+                color: var(--color-content-color);
+                border-left: solid var(--color-content-color) 5px;
+                ion-icon{
+                    color: var(--color-content-color);
+                }
+            }
+        }
+    }
+    
+    &__boton{
+        background-color: var(--color-content-color);
+        color: var(--color-content-blanco);
+        border: none;
+        @include width-height(100%, auto);
+        margin-top: 15px;
+        padding: 8px 0;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 850px) {
+    .aside-menu{
+        width: 80px;
+        position: fixed;
+        right: 0;
+        top: 25%;
+        bottom: 0;
+        margin: auto;
+        z-index: 10;
+
+        &__user{
+            display: none;
+        }
+
+        &__options{
+            ul{
+                li{
+                    @include flex(center, center);
+                    ion-icon{
+                        font-size: 20px;
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        button{
+            display: none;
+        }
+    }
+}

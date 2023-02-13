@@ -1,0 +1,206 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.aside-options{
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+    padding: 10px;
+
+    .aside{
+        background-color: var(--color-content-custom);
+        border-radius: 10px;
+        padding: 10px;
+
+        .close-modal{
+            display: none;
+        }
+
+        h3{
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: var(--color-content-negro);
+        }
+    
+        form{
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 15px;
+    
+            input{
+                width: 100%;
+                height: 30px;
+                padding-left: 35px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                overflow: hidden;
+                padding-top: 17px;
+                padding-bottom: 17px;
+                background-color: var(--color-bg);
+                color: var(--color-content-negro);
+
+                &::placeholder{
+                    color:  var(--color-content-negro);
+                }
+            }
+    
+            ion-icon{
+                position: absolute;
+                z-index: 2;
+                left: 10px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                color: var(--color-content-negro);
+            }
+        }
+
+        .messages{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .msgUser{
+                display: flex;
+                align-items: center;
+
+                &__img{
+                    @include width-height(40px, 40px);
+                    border-radius: 100%;
+                    overflow: hidden;
+
+                    img{
+                        @include width-height(100%, 100%);
+                        object-fit: cover;
+                    }
+                }
+
+                &__msg{
+                    @include flex(center, flex-start);
+                    flex-direction: column;
+                    margin-left: 10px;
+
+                    h5{
+                        color: var(--color-content-negro);
+                        font-size: 14px;
+                    }
+                    span{
+                        color: var(--color-content-negro);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .aside-notification{
+        background-color: var(--color-content-custom);
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 15px;
+
+        .subtitle{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--color-content-negro);
+        }
+
+        .close-modal{
+            display: none
+        }
+
+        .notification{
+            @include width-height(100%, auto);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .notificacion-item{
+                @include width-height(100%, auto);
+                overflow: hidden;
+                display: flex;
+                gap: 10px;
+
+                .noti-img{
+                    @include width-height(40px, 40px);
+                    border-radius: 100%;
+                    overflow: hidden;
+                    
+                    img{
+                        @include width-height(100%, 100%);
+                        object-fit: cover;
+                    }
+                }
+
+                .noti-info{
+                    @include width-height(80%, auto);
+
+                    p{
+                        color: var(--color-content-negro);
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1060px) {
+    .aside-options{
+        display: none;
+    }
+    .aside-options.show{
+        position: fixed;
+        @include width-height(100%, 100vh);
+        z-index: 17;
+        top: 0;
+        @include flex(center, center);
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+
+    .aside-notification{
+        display: none;
+    }
+
+    .aside-notification.show{
+        display: block;
+        @include width-height(400px, auto);
+        padding: 15px;
+        position: relative;
+
+        .close-modal{
+            display: block;
+            position: absolute;
+            right: 10px;
+            font-size: 25px;
+            color: var(--color-content-negro);
+        }
+    }
+
+    .aside{
+        display: none;
+    }
+
+    .aside.show{
+        display: block;
+        @include width-height(350px, 500px);
+        z-index: 17;
+        padding: 15px;
+        position: relative;
+        overflow-y: scroll;
+
+        .close-modal{
+            display: block;
+            position: absolute;
+            right: 10px;
+            font-size: 25px;
+            color: var(--color-content-negro);
+        }
+    }
+}

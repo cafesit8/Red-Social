@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafesito Book</title>
+    <link rel="icon" href="recursos/tazadecafe.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="loader active">
+        <img src="recursos/loading.gif" alt="">
+    </div>
+    <header>
+        <nav>
+            <span><img src="recursos/logo.png" alt="">Cafesito Book</span>
+            <div class="user">
+                <button>Publicar</button>
+                <div><img src="recursos/Stanley.png" alt=""></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="aside-menu">
+            <div class="aside-menu__user">
+                <div class="img-content"><img src="recursos/Stanley.png" alt=""></div>
+                <div class="user-title">
+                    <h2>Cafesito</h2>
+                    <h3>@coff</h3>
+                </div>
+            </div>
+            <div class="aside-menu__options">
+                <ul>
+                    <li class="active"><ion-icon name="home"></ion-icon><span>Inicio</span></li>
+                    <li id="notification-icon"><ion-icon name="notifications"></ion-icon><span>Notificaciones</span></li>
+                    <li id="messages-icon"><ion-icon name="chatbox"></ion-icon><span>Mensajes</span></li>
+                    <li id="config"><ion-icon name="color-palette"></ion-icon><span>Temas</span></li>
+                </ul>
+            </div>
+            <button class="aside-menu__boton">Crear Publicación</button>
+        </aside>
+        <section class="section-menu">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="recursos/story1.png" alt="">
+                    <div class="info">
+                        <h2>Elizabeth Olsen</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story2.png" alt="">
+                    <div class="info">
+                        <h2>Millie Bobby Brown</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story3.png" alt="">
+                    <div class="info">
+                        <h2>Billie Eilish</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story4.png" alt="">
+                    <div class="info">
+                        <h2>Billie Eilish</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story5.png" alt="">
+                    <div class="info">
+                        <h2>Ian Somerhalder</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story6.png" alt="">
+                    <div class="info">
+                        <h2>Tom Ellis</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story7.png" alt="">
+                    <div class="info">
+                        <h2>Ian Somerhalder</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story8.png" alt="">
+                    <div class="info">
+                        <h2>Tom Ellis</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="recursos/story9.png" alt="">
+                    <div class="info">
+                        <h2>Danielle Rose Russell</h2>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              <div class="form">
+                <form action="">
+                    <input id="comment-publication" type="text" placeholder="¿Qué estás pensando?">
+                    <div class="img-content"><img src="recursos/Stanley.png" alt=""></div>
+                    <button id="comment">Publicar</button>
+                </form>
+              </div>
+              <div class="publication">
+                <div class="comment-item"></div>
+                <article class="publication__item">
+                    <div class="publication__title">
+                        <div class="img-content">
+                            <img src="recursos/rose.png" alt="">
+                        </div>
+                        <div class="status">
+                            <h2>Danielle Rose Russell</h2>
+                            <h4>Estados Unidos, hace 14 segundos</h4>
+                        </div>
+                    </div>
+                    <div class="publication__img">
+                        <img src="recursos/post1.jpg" alt="">
+                    </div>
+                    <div class="publication__icons">
+                        <ion-icon class="like" name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <div class="publication__comment">
+                        <strong>Danielle Rose Russel</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio vero magni voluptatum enim ullam labore.
+                    </div>
+                </article>
+                <article class="publication__item">
+                    <div class="publication__title">
+                        <div class="img-content">
+                            <img src="recursos/billieIcon.jpg" alt="">
+                        </div>
+                        <div class="status">
+                            <h2>Billie Eilish</h2>
+                            <h4>Estados Unidos, hace 2 horas</h4>
+                        </div>
+                    </div>
+                    <div class="publication__img">
+                        <img src="recursos/post2.png" alt="">
+                    </div>
+                    <div class="publication__icons">
+                        <ion-icon class="like" name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <div class="publication__comment">
+                        <strong>Billie Eilish</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio vero magni voluptatum enim ullam labore enim ullam labore..
+                    </div>
+                </article>
+                <article class="publication__item">
+                    <div class="publication__title">
+                        <div class="img-content">
+                            <img src="recursos/ian.jpg" alt="">
+                        </div>
+                        <div class="status">
+                            <h2>Ian Somerhalder</h2>
+                            <h4>Reino Unido, hace 3 horas</h4>
+                        </div>
+                    </div>
+                    <div class="publication__img">
+                        <img src="recursos/post3.png" alt="">
+                    </div>
+                    <div class="publication__icons">
+                        <ion-icon class="like" name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <div class="publication__comment">
+                        <strong>Ian Somerhalder</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio vero magni voluptatum enim ullam labore.
+                    </div>
+                </article>
+                <article class="publication__item">
+                    <div class="publication__title">
+                        <div class="img-content">
+                            <img src="recursos/tom.png" alt="">
+                        </div>
+                        <div class="status">
+                            <h2>Tome Ellis</h2>
+                            <h4>Reino Unido, hace 4 horas</h4>
+                        </div>
+                    </div>
+                    <div class="publication__img">
+                        <img src="recursos/post4.jpg" alt="">
+                    </div>
+                    <div class="publication__icons">
+                        <ion-icon class="like" name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <div class="publication__comment">
+                        <strong>Tom Ellis</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio vero magni voluptatum enim ullam labore.
+                    </div>
+                </article>
+              </div>
+        </section>
+        <aside class="aside-options">
+            <div class="aside">
+                <ion-icon class="close-modal" id="close-modal" name="close"></ion-icon>
+                <h3>Mensajes</h3>
+                <form action="">
+                    <input id="input-filtro" type="text" placeholder="Buscar Mensaje">
+                    <ion-icon name="search"></ion-icon>
+                </form>
+                <div id="messages-section" class="messages"></div>
+            </div>
+            <div class="aside-notification">
+                <ion-icon class="close-modal" id="close-modal-notification" name="close"></ion-icon>
+                <h3 class="subtitle">Notificaciones</h3>
+                <div id="notification" class="notification"></div>
+            </div>
+        </aside>
+    </main>
+    <div class="story">
+        <div class="content">
+            <ion-icon id="close-modal-story" name="close"></ion-icon>
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="theme">
+        <div class="content">
+            <ion-icon id="close-modal-color" name="close"></ion-icon>
+            <h4>Configura a tu gusto</h4>
+            <div class="select-color">
+                <div class="celeste active"></div>
+                <div class="amarillo"></div>
+                <div class="verde"></div>
+                <div class="rojo"></div>
+                <div class="morado"></div>
+            </div>
+            <h4>Color de fondo</h4>
+            <div class="select-bg">
+                <div class="dia active">Día</div>
+                <div class="oscuro">Oscuro</div>
+                <div class="noche">Noche</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h5>Derechos <strong>@Cafesito</strong></h5>
+        <h5>2023</h5>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+          freeMode: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+    </script>
+</body>
+</html>

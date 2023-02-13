@@ -1,0 +1,13 @@
+@use 'mixins' as *;
+.loader.active{
+    width: 100%;
+    height: 100vh;
+    @include flex(center, center);
+    position: fixed;
+    background-color: #E4EEF8;
+    z-index: 20;
+}
+
+.loader{
+    display: none;
+}

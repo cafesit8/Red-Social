@@ -1,0 +1,17 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+footer{
+    background-color: var(--color-content-custom);
+    @include width-height(100%, 70px);
+    @include flex(center, center);
+    flex-direction: column;
+    color: $color-blanco;
+    margin-top: 15px;
+    padding: 40px 0;
+
+    h5{
+        font-weight: 400;
+        color: var(--color-content-negro);
+    }
+}
