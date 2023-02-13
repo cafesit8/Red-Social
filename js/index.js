@@ -156,19 +156,14 @@ colorItem.forEach(btn=>{
         const color = e.target.classList
         if (color.contains('celeste')) {
             theme.style.setProperty('--color-content-color', '#53bfe0')
-            // theme.style.setProperty('--color-bg', '#E4EEF8')
         }else if(color.contains('amarillo')){
             theme.style.setProperty('--color-content-color', '#E9DC16')
-            // theme.style.setProperty('--color-bg', '#FEFFDC')
         }else if(color.contains('verde')){
             theme.style.setProperty('--color-content-color', '#7DDA2A')
-            // theme.style.setProperty('--color-bg', '#EBFFD9')
         }else if(color.contains('rojo')){
             theme.style.setProperty('--color-content-color', '#FB0B0B')
-            // theme.style.setProperty('--color-bg', '#FFEAEA')
         }else if(color.contains('morado')){
             theme.style.setProperty('--color-content-color', '#9A44FB')
-            // theme.style.setProperty('--color-bg', '#F2E6FF')
         }
         btn.classList.add('active')
     })
